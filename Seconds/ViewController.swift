@@ -9,3 +9,15 @@ class ViewController: UIViewController {
     }
     
 }
+
+extension ViewController: UICollectionViewDataSource {
+    
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return intervals.count
+    }
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        return collectionView.dequeueReusableCellWithReuseIdentifier("Interval Cell", forIndexPath: indexPath)
+    }
+    
+}
