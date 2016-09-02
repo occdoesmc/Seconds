@@ -1,6 +1,6 @@
 import UIKit
 
-class ViewController: UIViewController {
+class IntervalsViewController: UIViewController {
     
     let intervals: Set = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
     
@@ -10,7 +10,7 @@ class ViewController: UIViewController {
     
 }
 
-extension ViewController: UICollectionViewDataSource {
+extension IntervalsViewController: UICollectionViewDataSource {
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return intervals.count
