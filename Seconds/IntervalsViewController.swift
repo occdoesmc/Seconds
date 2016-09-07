@@ -19,11 +19,7 @@ extension IntervalsViewController: UICollectionViewDataSource {
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let interval = intervals[indexPath.item]
         let intervalCell = collectionView.dequeueReusableCellWithReuseIdentifier("Interval Cell", forIndexPath: indexPath) as! IntervalCell
-        
         intervalCell.secondsLabel?.text = String(interval)
-        
-        // here be dragons
-        
         return intervalCell
     }
     
