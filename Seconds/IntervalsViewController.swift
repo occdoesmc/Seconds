@@ -2,14 +2,7 @@ import UIKit
 
 class IntervalsViewController: UIViewController {
     
-    static var preferredRange = 1...60
-    
-    let intervals = IntervalsViewController.preferredIntervals
-    
-    static var preferredIntervals: [Int] {
-        let reversedRange = preferredRange.reverse()
-        return Array(reversedRange)
-    }
+    let intervals = IntervalList.preferredIntervals
         
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return .LightContent
