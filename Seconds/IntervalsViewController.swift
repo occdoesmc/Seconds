@@ -2,8 +2,15 @@ import UIKit
 
 class IntervalsViewController: UIViewController {
     
-    let intervals: Set = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+    static var preferredRange = 1...60
     
+    let intervals = IntervalsViewController.preferredIntervals
+    
+    static var preferredIntervals: [Int] {
+        let reversedRange = preferredRange.reverse()
+        return Array(reversedRange)
+    }
+        
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return .LightContent
     }
@@ -17,7 +24,14 @@ extension IntervalsViewController: UICollectionViewDataSource {
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        return collectionView.dequeueReusableCellWithReuseIdentifier("Interval Cell", forIndexPath: indexPath)
+        let interval = intervals[indexPath.item]
+        let intervalCell = collectionView.dequeueReusableCellWithReuseIdentifier("Interval Cell", forIndexPath: indexPath) as! IntervalCell
+        
+        intervalCell.secondsLabel?.text = String(interval)
+        
+        // here be dragons
+        
+        return intervalCell
     }
     
 }
