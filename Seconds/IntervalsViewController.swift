@@ -2,7 +2,11 @@ import UIKit
 
 class IntervalsViewController: UIViewController {
     
+    // MARK: Data model
+    
     let intervals = IntervalList.preferredIntervals
+    
+    // MARK: Status bar appearance
     
     override var preferredStatusBarStyle : UIStatusBarStyle {
         return .lightContent
