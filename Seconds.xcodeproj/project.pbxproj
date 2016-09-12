@@ -14,6 +14,7 @@
 		465F902F1D748E8300DB90EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 465F902D1D748E8300DB90EF /* LaunchScreen.storyboard */; };
 		469A41EA1D8065F100C686EE /* IntervalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469A41E91D8065F100C686EE /* IntervalCell.swift */; };
 		469A41EC1D8073F700C686EE /* IntervalList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469A41EB1D8073F600C686EE /* IntervalList.swift */; };
+		55ED6F531D8710BD008C9992 /* IntervalListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55ED6F521D8710BD008C9992 /* IntervalListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		465F90301D748E8300DB90EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		469A41E91D8065F100C686EE /* IntervalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntervalCell.swift; sourceTree = "<group>"; };
 		469A41EB1D8073F600C686EE /* IntervalList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntervalList.swift; sourceTree = "<group>"; };
+		55ED6F521D8710BD008C9992 /* IntervalListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntervalListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			children = (
 				465F90241D748E8300DB90EF /* AppDelegate.swift */,
 				465F90261D748E8300DB90EF /* IntervalsViewController.swift */,
+				55ED6F521D8710BD008C9992 /* IntervalListView.swift */,
 				469A41EB1D8073F600C686EE /* IntervalList.swift */,
 				465F90281D748E8300DB90EF /* Main.storyboard */,
 				469A41E91D8065F100C686EE /* IntervalCell.swift */,
@@ -143,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				469A41EA1D8065F100C686EE /* IntervalCell.swift in Sources */,
+				55ED6F531D8710BD008C9992 /* IntervalListView.swift in Sources */,
 				465F90271D748E8300DB90EF /* IntervalsViewController.swift in Sources */,
 				469A41EC1D8073F700C686EE /* IntervalList.swift in Sources */,
 				465F90251D748E8300DB90EF /* AppDelegate.swift in Sources */,

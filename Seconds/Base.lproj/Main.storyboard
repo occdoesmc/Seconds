@@ -19,8 +19,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="J2q-P6-IBE">
-                                <frame key="frameInset" width="600" height="600"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="J2q-P6-IBE" customClass="IntervalListView" customModule="Seconds" customModuleProvider="target">
                                 <color key="backgroundColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="GiQ-Tm-rMu">
                                     <size key="itemSize" width="44" height="44"/>
@@ -56,6 +55,7 @@
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
+                                    <outlet property="collectionViewFlowLayout" destination="GiQ-Tm-rMu" id="6vd-bb-3eU"/>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="1B8-I0-hPH"/>
                                 </connections>
                             </collectionView>
@@ -69,10 +69,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="m8e-MQ-2px"/>
-                    <connections>
-                        <outlet property="collectionView" destination="J2q-P6-IBE" id="hpS-S0-E1W"/>
-                        <outlet property="collectionViewLayout" destination="GiQ-Tm-rMu" id="KWn-ji-SxE"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
