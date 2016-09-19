@@ -2,6 +2,6 @@ import UIKit
 
 class IntervalCell: UICollectionViewCell {
 
-    @IBOutlet var secondsLabel: UILabel?
+    @IBOutlet var secondsLabel: UILabel!
 
 }
