@@ -22,9 +22,9 @@ extension IntervalListViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let interval = intervals[indexPath.item]
-        let intervalCell = collectionView.dequeueReusableCell(withReuseIdentifier: IntervalCell.preferredReuseIdentifier, for: indexPath) as! IntervalCell
-        intervalCell.secondsLabel.text = String(interval)
-        return intervalCell
+        let intervalListCell = collectionView.dequeueReusableCell(withReuseIdentifier: IntervalListCell.preferredReuseIdentifier, for: indexPath) as! IntervalListCell
+        intervalListCell.secondsLabel.text = String(interval)
+        return intervalListCell
     }
     
 }
