@@ -15,12 +15,24 @@ struct Animal: Hashable {
     
 }
 
-let animalList: Set<Animal> = [
-    Animal(name: "Fly", timeMultiplier: 6.8),
-    Animal(name: "Dog", timeMultiplier: 2.0),
-    Animal(name: "Cat", timeMultiplier: 1.4),
-    Animal(name: "Humans", timeMultiplier: 1.0),
-    Animal(name: "Blacknose Shark", timeMultiplier: 0.45),
-    Animal(name: "Leatherback Turtle", timeMultiplier: 0.37),
-    Animal(name: "European Eel", timeMultiplier: 0.35)
-]
+struct AnimalList {
+    
+    let animalsByTime: [Animal] = AnimalList.animals.sorted { lhs, rhs -> Bool in
+        lhs.timeMultiplier < rhs.timeMultiplier
+    }
+    
+    static let animals: Set<Animal> = [
+        Animal(name: "Fly", timeMultiplier: 6.8),
+        Animal(name: "Dog", timeMultiplier: 2.0),
+        Animal(name: "Cat", timeMultiplier: 1.4),
+        Animal(name: "Humans", timeMultiplier: 1.0),
+        Animal(name: "Blacknose Shark", timeMultiplier: 0.45),
+        Animal(name: "Leatherback Turtle", timeMultiplier: 0.37),
+        Animal(name: "European Eel", timeMultiplier: 0.35)
+    ]
+    
+}
+
+
+
+
