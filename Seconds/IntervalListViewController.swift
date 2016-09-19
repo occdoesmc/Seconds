@@ -1,6 +1,6 @@
 import UIKit
 
-class IntervalsViewController: UIViewController {
+class IntervalListViewController: UIViewController {
     
     // MARK: Data model
     
@@ -14,7 +14,7 @@ class IntervalsViewController: UIViewController {
     
 }
 
-extension IntervalsViewController: UICollectionViewDataSource {
+extension IntervalListViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return intervals.count
