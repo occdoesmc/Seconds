@@ -28,7 +28,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Interval Cell" id="9lK-aD-m9G" customClass="IntervalCell" customModule="Seconds" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Interval List Cell" id="9lK-aD-m9G" customClass="IntervalCell" customModule="Seconds" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -72,7 +72,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2137" y="455"/>
+            <point key="canvasLocation" x="2279" y="455"/>
         </scene>
         <!--Animals-->
         <scene sceneID="rRV-64-7S5">
@@ -109,6 +109,7 @@
                                 <connections>
                                     <outlet property="nameLabel" destination="pfP-4B-da1" id="N0i-nB-6Vq"/>
                                     <outlet property="timeMultiplierLabel" destination="hjS-qR-6fc" id="c94-4u-04z"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="HsB-iK-iS2"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
