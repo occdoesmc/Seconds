@@ -51,6 +51,7 @@
                                         </constraints>
                                         <connections>
                                             <outlet property="secondsLabel" destination="fD7-No-Pa0" id="vpz-lt-c6g"/>
+                                            <segue destination="keV-HC-H8W" kind="show" id="jNU-3Z-bvk"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -73,6 +74,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2230" y="455"/>
+        </scene>
+        <!--Timer View Controller-->
+        <scene sceneID="wrk-b2-KyC">
+            <objects>
+                <viewController id="keV-HC-H8W" customClass="TimerViewController" customModule="Seconds" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BIV-HQ-GpI"/>
+                        <viewControllerLayoutGuide type="bottom" id="gd6-Cy-4N1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Dov-UI-yug">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jM2-hi-WoM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2982" y="455"/>
         </scene>
         <!--Animals-->
         <scene sceneID="rRV-64-7S5">
