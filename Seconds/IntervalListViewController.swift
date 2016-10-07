@@ -42,9 +42,8 @@ class IntervalListViewController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let seconds = interval(at: indexPath)
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: IntervalListCell.preferredReuseIdentifier, for: indexPath) as! IntervalListCell
-        cell.secondsLabel.text = String(seconds)
+        cell.seconds = interval(at: indexPath)
         return cell
     }
     
