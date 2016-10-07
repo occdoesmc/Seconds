@@ -18,6 +18,8 @@ class IntervalListViewController: UICollectionViewController {
         }
     }
     
+    // MARK: Storyboard segues
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
         guard let selectedIndexPath = collectionView?.indexPathsForSelectedItems?.first else { return }
@@ -29,7 +31,7 @@ class IntervalListViewController: UICollectionViewController {
     
     // MARK: Status bar appearance
     
-    override var preferredStatusBarStyle : UIStatusBarStyle {
+    override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
     

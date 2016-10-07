@@ -3,6 +3,8 @@ import UIKit
 class AnimalListViewController: UITableViewController {
     
     let animalList = AnimalList()
+    
+    // MARK: Storyboard segues
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
@@ -11,6 +13,8 @@ class AnimalListViewController: UITableViewController {
         let animal = animalList.animalsByTime[animalIndex]
         intervalListViewController.animal = animal
     }
+    
+    // MARK: Table view data source
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return animalList.animalsByTime.count
