@@ -6,9 +6,10 @@ class AnimalListViewController: UITableViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
+        guard let intervalListViewController = segue.destination as? IntervalListViewController else { return }
         let animalIndex = tableView.indexPathForSelectedRow!.row
         let animal = animalList.animalsByTime[animalIndex]
-        segue.destination.title = animal.name
+        intervalListViewController.animal = animal
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

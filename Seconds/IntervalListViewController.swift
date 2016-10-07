@@ -1,10 +1,16 @@
 import UIKit
 
 class IntervalListViewController: UIViewController {
-    
+
     // MARK: Data model
     
     let intervals = IntervalList.preferredIntervals
+    
+    var animal: Animal? {
+        didSet {
+            title = animal?.name
+        }
+    }
     
     // MARK: Status bar appearance
     
