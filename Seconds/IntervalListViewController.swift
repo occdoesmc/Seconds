@@ -1,15 +1,30 @@
 import UIKit
 
-class IntervalListViewController: UIViewController {
+class IntervalListViewController: UICollectionViewController {
 
-    // MARK: Data model
+    // MARK: Intervals
     
     let intervals = IntervalList.preferredIntervals
+    
+    func interval(at indexPath: IndexPath) -> Int {
+        return intervals[indexPath.item]
+    }
+    
+    // MARK: Animal
     
     var animal: Animal? {
         didSet {
             title = animal?.name
         }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        guard let selectedIndexPath = collectionView?.indexPathsForSelectedItems?.first else { return }
+        let selectedSeconds = interval(at: selectedIndexPath)
+        guard let timerViewController = segue.destination as? TimerViewController else { return }
+        timerViewController.seconds = selectedSeconds
+        timerViewController.timeMultiplier = animal?.timeMultiplier ?? 1
     }
     
     // MARK: Status bar appearance
@@ -18,19 +33,17 @@ class IntervalListViewController: UIViewController {
         return .lightContent
     }
     
-}
-
-extension IntervalListViewController: UICollectionViewDataSource {
+    // MARK: Collection view data source
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return intervals.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let interval = intervals[indexPath.item]
-        let intervalListCell = collectionView.dequeueReusableCell(withReuseIdentifier: IntervalListCell.preferredReuseIdentifier, for: indexPath) as! IntervalListCell
-        intervalListCell.secondsLabel.text = String(interval)
-        return intervalListCell
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let seconds = interval(at: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: IntervalListCell.preferredReuseIdentifier, for: indexPath) as! IntervalListCell
+        cell.secondsLabel.text = String(seconds)
+        return cell
     }
     
 }
