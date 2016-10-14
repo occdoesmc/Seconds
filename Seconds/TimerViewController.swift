@@ -30,6 +30,9 @@ class TimerViewController: UIViewController {
     
     private func timerDone() {
         let timerDoneController = TimerDoneController()
+        timerDoneController.onOkay = { [navigationController] in
+            _ = navigationController?.popViewController(animated: true)
+        }
         present(timerDoneController.alertController, animated: true, completion: nil)
     }
     
