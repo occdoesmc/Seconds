@@ -24,13 +24,13 @@ class TimerViewController: UIViewController {
         updateTimeLabel()
         if seconds == 0 {
             timer.invalidate()
-            let timerDoneTitle = NSLocalizedString("Timer Done", comment: "")
-            let timerDoneController = UIAlertController(title: timerDoneTitle, message: nil, preferredStyle: .alert)
-            let okeyTitle = NSLocalizedString("Okay", comment: "")
-            let okayAction = UIAlertAction(title: okeyTitle, style: .default, handler: nil)
-            timerDoneController.addAction(okayAction)
-            present(timerDoneController, animated: true, completion: nil)
+            timerDone()
         }
+    }
+    
+    private func timerDone() {
+        let timerDoneController = TimerDoneController()
+        present(timerDoneController.alertController, animated: true, completion: nil)
     }
     
     private func updateTimeLabel() {

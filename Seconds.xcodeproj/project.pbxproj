@@ -16,6 +16,7 @@
 		469A41EC1D8073F700C686EE /* IntervalList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469A41EB1D8073F600C686EE /* IntervalList.swift */; };
 		5556D2221D8C47E4005DE10A /* AnimalListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5556D2211D8C47E4005DE10A /* AnimalListViewController.swift */; };
 		5556D2241D8C49B2005DE10A /* AnimalList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5556D2231D8C49B2005DE10A /* AnimalList.swift */; };
+		557B67731DB12CA300A66981 /* TimerDoneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557B67721DB12CA300A66981 /* TimerDoneController.swift */; };
 		55AD20EA1D90432B0099AB45 /* AnimalListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AD20E91D90432B0099AB45 /* AnimalListCell.swift */; };
 		55ECA4C71DA2AFFC00FAC536 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55ECA4C61DA2AFFC00FAC536 /* TimerViewController.swift */; };
 		55ED6F531D8710BD008C9992 /* IntervalListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55ED6F521D8710BD008C9992 /* IntervalListView.swift */; };
@@ -33,6 +34,7 @@
 		469A41EB1D8073F600C686EE /* IntervalList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntervalList.swift; sourceTree = "<group>"; };
 		5556D2211D8C47E4005DE10A /* AnimalListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalListViewController.swift; sourceTree = "<group>"; };
 		5556D2231D8C49B2005DE10A /* AnimalList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalList.swift; sourceTree = "<group>"; };
+		557B67721DB12CA300A66981 /* TimerDoneController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerDoneController.swift; sourceTree = "<group>"; };
 		55AD20E91D90432B0099AB45 /* AnimalListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalListCell.swift; sourceTree = "<group>"; };
 		55ECA4C61DA2AFFC00FAC536 /* TimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		55ED6F521D8710BD008C9992 /* IntervalListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntervalListView.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				469A41EB1D8073F600C686EE /* IntervalList.swift */,
 				465F90281D748E8300DB90EF /* Main.storyboard */,
 				55ECA4C61DA2AFFC00FAC536 /* TimerViewController.swift */,
+				557B67721DB12CA300A66981 /* TimerDoneController.swift */,
 				5556D2211D8C47E4005DE10A /* AnimalListViewController.swift */,
 				55AD20E91D90432B0099AB45 /* AnimalListCell.swift */,
 				5556D2231D8C49B2005DE10A /* AnimalList.swift */,
@@ -160,6 +163,7 @@
 			files = (
 				469A41EA1D8065F100C686EE /* IntervalListCell.swift in Sources */,
 				55ECA4C71DA2AFFC00FAC536 /* TimerViewController.swift in Sources */,
+				557B67731DB12CA300A66981 /* TimerDoneController.swift in Sources */,
 				55ED6F531D8710BD008C9992 /* IntervalListView.swift in Sources */,
 				5556D2241D8C49B2005DE10A /* AnimalList.swift in Sources */,
 				465F90271D748E8300DB90EF /* IntervalListViewController.swift in Sources */,
