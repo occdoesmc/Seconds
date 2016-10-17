@@ -1,4 +1,5 @@
 import UIKit
+import AVFoundation
 
 class TimerViewController: UIViewController {
 
@@ -9,9 +10,15 @@ class TimerViewController: UIViewController {
     
     private var timer: Timer?
     
+    lazy var player: AVPlayer = {
+        let soundURL = Bundle.main.url(forResource: "TimerDone", withExtension: "m4a")!
+        return AVPlayer(url: soundURL)
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         updateTimeLabel()
+        try! AVAudioSession.sharedInstance().setActive(true)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -29,13 +36,22 @@ class TimerViewController: UIViewController {
     }
     
     private func timerDone() {
-        let timerDoneController = TimerDoneController()
-        timerDoneController.onOkay = { [navigationController] in
-            _ = navigationController?.popViewController(animated: true)
-        }
-        present(timerDoneController.alertController, animated: true, completion: nil)
+        player.play()
+        present(alertController, animated: true, completion: nil)
     }
     
+    var alertController: UIAlertController {
+        let alertTitle = NSLocalizedString("Timer Done", comment: "")
+        let alertController = UIAlertController(title: alertTitle, message: nil, preferredStyle: .alert)
+        let okeyTitle = NSLocalizedString("Okay", comment: "")
+        let okayAction = UIAlertAction(title: okeyTitle, style: .default) { [navigationController] _ in
+            _ = navigationController?.popViewController(animated: true)
+        }
+        alertController.addAction(okayAction)
+        return alertController
+    }
+    
+
     private func updateTimeLabel() {
         timeLabel.text = String(seconds)
     }
